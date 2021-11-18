@@ -1,0 +1,112 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body{
+ font-family: Arial;
+ margin: 0;
+}
+
+.header{
+
+padding: 60px;
+text-align: center;
+background-color: #1abc9c;
+color: white;
+}
+
+
+
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side{
+    background-color: #f1f1f1;
+    padding: 20px;
+    height: 200px
+    float: left;
+    width: 25%;
+
+}
+
+/* Main column */
+.main{
+    background-color: white;
+    padding: 20px;
+    height: 200px;
+    float: left;
+    width: 75%;
+    display: inline-block;
+}
+
+/* Create three equal columns that are next to each other */
+.left{
+  background-color: #2196F3;
+  padding: 20px;
+  height: 250px;
+  width: 33%;
+  float: left;
+
+}
+
+.center{
+  background-color: #f1f1f1;
+  padding: 20px;
+  height: 250px;
+  width: 33%;
+  display: inline-block
+}
+
+.right{
+  background-color: #4CAF50;
+  padding: 20px;
+  height: 250px;
+  width: 33%;
+  float: right;
+  display: inline-block;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    position: fixed;
+    position: 0;
+    width: 100%;
+
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+   div.row{
+     width: 100%;
+   }
+  .footer
+  {
+      position: static;
+  }
+}

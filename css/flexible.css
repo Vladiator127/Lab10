@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 60px;
+    align text: center;
+    background: #1abc9c;
+    color: white;
+}
+
+
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    length: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+  length: 70%;
+  background-color: white;
+  padding: 20px;
+
+}
+
+/* Create three equal columns that are next to each other */
+.left {
+  flex: 33%;
+  background-color: #2196F3;
+  padding: 20px;
+  height: 250px;
+}
+
+.center {
+  flex: 33%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  height: 250px;
+}
+
+.right {
+  flex: 33%;
+  background-color: #4CAF50;
+  padding: 20px;
+  height: 250px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    position: fixed;
+    float: left;
+    float: bottom;
+    width: 100%;
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row, .navbar {
+        direction: column;
+    }
+
+    .footer{
+      position: static;
+    }
+}
